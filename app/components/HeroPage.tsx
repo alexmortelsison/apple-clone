@@ -9,7 +9,7 @@ export default function HeroPage() {
     setIsVideoFinished(true);
   };
   return (
-    <div className="h-screen w-full overflow-hidden bg-black relative inset-0 -z-50">
+    <div className="h-screen w-screen overflow-hidden bg-black relative inset-0 -z-50 font-inter">
       {!isVideoFinished && (
         <div className="h-screen w-fit">
           <video
@@ -29,7 +29,7 @@ export default function HeroPage() {
           alt="hero"
           width={2000}
           height={2000}
-          className="object-contain h-[100vh] max-w-screen mx-auto pt-16"
+          className="object-contain px-64 pt-32"
         />
       )}
     </div>
