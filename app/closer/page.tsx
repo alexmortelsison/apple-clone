@@ -4,7 +4,7 @@ import React from "react";
 
 export default function CloserPage() {
   return (
-    <div className="px-44 pt-48 bg-gradient-to-b from-black via-[#1d1d1f] to-[#1d1d1f] min-h-screen w-full relative">
+    <div className="px-44 pt-48 bg-black min-h-screen w-full relative">
       <h1 className="lg:text-5xl text-2xl font-semibold text-white pl-16">
         Take a closer look.
       </h1>
