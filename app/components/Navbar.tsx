@@ -1,13 +1,6 @@
 import { AiFillApple } from "react-icons/ai";
 import React from "react";
 import {
-  NavigationMenu,
-  NavigationMenuContent,
-  NavigationMenuItem,
-  NavigationMenuList,
-  NavigationMenuTrigger,
-} from "@/components/ui/navigation-menu";
-import {
   HoverCard,
   HoverCardContent,
   HoverCardTrigger,

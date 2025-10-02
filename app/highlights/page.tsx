@@ -14,7 +14,7 @@ export default function HighlightsPage() {
       animation = gsap.to(titleRef.current, {
         opacity: 1,
         delay: 0.8,
-        y: 0, // Ensure this is 0 to slide up from translate-y-20
+        y: 0,
         duration: 1,
         ease: "power2.inOut",
         scrollTrigger: {

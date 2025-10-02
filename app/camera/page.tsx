@@ -2,7 +2,6 @@
 import gsap from "gsap";
 import Image from "next/image";
 import React, { useEffect, useRef } from "react";
-import { AiFillPlusCircle } from "react-icons/ai";
 
 export default function CameraPage() {
   const titleRef = useRef(null);
@@ -79,7 +78,7 @@ export default function CameraPage() {
             creative choices and add a longer reach to your compositions.
           </p>
         </div>
-        {/* <div className="flex bg-[#1d1d1f] items-center gap-x-4 px-8 py-4 rounded-full font-semibold">
+        {/* <div className="flex bg-[#1d1d1f] items-center gap-x-4 px-8 py-4 rounded-full font-semibold absolute">
           <button>Compare iPhone design</button>
           <div className="text-2xl text-blue-500">
             <AiFillPlusCircle />
