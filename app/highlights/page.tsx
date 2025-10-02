@@ -3,18 +3,32 @@ import { AiOutlinePlayCircle } from "react-icons/ai";
 import React, { useEffect, useRef } from "react";
 import { AppleCardsCarouselDemo } from "../components/AppleCardsCarousel";
 import gsap from "gsap";
+import { ScrollTrigger } from "gsap/ScrollTrigger";
 
+gsap.registerPlugin(ScrollTrigger);
 export default function HighlightsPage() {
-  const titleRef = useRef(null);
+  const titleRef = useRef<HTMLHeadingElement>(null);
   useEffect(() => {
-    gsap.to(titleRef.current, {
-      opacity: 1,
-      delay: 0.8,
-      y: 20,
-      duration: 1,
-      ease: "power2.inOut",
-    });
-  });
+    let animation: gsap.core.Tween;
+    if (titleRef.current) {
+      animation = gsap.to(titleRef.current, {
+        opacity: 1,
+        delay: 0.8,
+        y: 0, // Ensure this is 0 to slide up from translate-y-20
+        duration: 1,
+        ease: "power2.inOut",
+        scrollTrigger: {
+          trigger: titleRef.current,
+          start: "top 85%",
+          toggleActions: "play none none none",
+        },
+      });
+    }
+
+    return () => {
+      animation?.scrollTrigger?.kill();
+    };
+  }, []);
   return (
     <div className="min-h-screen min-w-screen bg-[#1d1d1f] text-white font-inter pb-8 overflow-hidden px-4">
       <div className=" max-w-7xl mx-auto">
